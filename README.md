@@ -1,0 +1,2 @@
+# MANIPAL 
+repository for assignments.
