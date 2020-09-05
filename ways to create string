@@ -1,0 +1,7 @@
+How many ways we can create String object?
+Ans:
+There are two ways:
+1.
+String a = new String("ABC");
+2.
+String a = "ABc";
