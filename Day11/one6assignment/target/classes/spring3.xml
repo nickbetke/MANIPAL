@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+		
+		
+		<!-- used in case of autowired -->
+		<!-- <context:annotation-config />-->
+		
+		<bean id="Organization" class="zero.one.Organization">
+			<property name = "id" value="11" />
+			<property name = "name" value="manipal" />
+			<property name = "employeeList">
+				<list>
+				<ref bean="employee1" />
+				<ref bean="employee2" />
+				<ref bean="employee3" />
+				</list>
+			</property>
+			
+		</bean>
+		
+		<bean id="employee1" class="zero.one.Employee">
+			<constructor-arg name="empId" value="10001" />
+			<constructor-arg name="empName" value="Raju" />
+			<constructor-arg name="salary" value="89333" />
+			<constructor-arg name="address" ref="address" />
+		</bean>
+		
+		<bean id="employee2" class="zero.one.Employee">
+			<constructor-arg name="empId" value="10021" />
+			<constructor-arg name="empName" value="Nilesh" />
+			<constructor-arg name="salary" value="90000" />
+			
+			<constructor-arg name="address" ref="address1" />
+		</bean>
+		
+		<bean id="employee3" class="zero.one.Employee">
+			<constructor-arg name="empId" value="10003" />
+			<constructor-arg name="empName" value="Nick" />
+			<constructor-arg name="salary" value="80000" />
+			
+			<constructor-arg name="address" ref="address2" />
+		</bean>
+	<bean id="address" class="zero.one.Address">
+		<property name="streetNo" value="12" />
+		<property name="city" value="Parbhani" />
+		<property name="pin" value="40002" />
+	</bean>
+	<bean id="address1" class="zero.one.Address">
+		<property name="streetNo" value="126" />
+		<property name="city" value="Parli" />
+		<property name="pin" value="70000" />
+	</bean>
+	<bean id="address2" class="zero.one.Address">
+		<property name="streetNo" value="125" />
+		<property name="city" value="Pune" />
+		<property name="pin" value="80000" />
+	</bean>
+
+
+
+
+
+
+	</beans>
+
