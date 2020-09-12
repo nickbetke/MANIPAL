@@ -13,6 +13,13 @@ Conduct the Loop Optimisation for the following  source code  to improve the pro
 for (i=1; i<count; i++) { 
 	a[i] = i*j*k*l*m*n; 
 } 
+Ans:
+int f = i*j*k*l*m*n;
+for (i=1; i<count; i++) { 
+	a[i] = f; 
+} 
+
+
 
 2.
 for (discount = 0; discount < numD; discount++) 
@@ -23,10 +30,22 @@ for (discount = 0; discount < numD; discount++)
  } 
 } 
 
+Ans:
+
+
+
+
 3.
 for (i=1; i<count; i++) { 
    a[i] = Math.pow(log(i) / log(3), 2); 
 } 
+
+Ans:
+double f = Math.pow(log(i) / log(3), 2);
+for (i=1; i<count; i++) { 
+   a[i] = f; 
+} 
+
 
 Assignment-3
 
@@ -39,6 +58,8 @@ int i = Math.round(f);
 System.out.println(i);
 }}
 
+Ans: 2
+
 2.
 Which of the following are valid declarations?
 1. int i = 0XCAFE;
@@ -46,6 +67,8 @@ Which of the following are valid declarations?
 3. char c = 'A';
 4. byte b = 128;
 5. char c = ""A"";"
+
+Ans: 3.
 
 3. 
 class Test{
@@ -61,7 +84,7 @@ class Test{
 }
 What is the output of the program?
 
-
+Ans: 12 1
 
 
 
