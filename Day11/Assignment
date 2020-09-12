@@ -3,3 +3,9 @@ Ans: singlecton folder
 2. write code for checking multiple reference type autowiring
 Ans: one6assignment
 3. How many ways we can create String object?
+Ans:
+There are two ways
+1.
+String a = new String("ABC");
+2.
+String a = "ABc";
