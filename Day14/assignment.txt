@@ -1,0 +1,280 @@
+ResponseEntity
+	-- representation of HTTP Response
+	-- includes Headers, Status , Body
+
+
+class ExceptionResponse :-
+	message
+	timestamp
+
+
+MovieController ----------> MovieNotFoundException---------->Client
+
+MovieController ----------> MovieNotFoundException---->MovieResponseEntityExceptionHandler------>Client
+
+
+
+1. get by ID
+2. add movie
+3. update movie
+
+4. delete movie - assignment
+5. getAllMovies - assignment
+6. get by title - assignment
+7. get by leadrole and title - assignment
+-----------------------------------------------------------------
+
+
+
+An application contains :- 
+	UI - User Interface
+	business logic
+	database access logic
+
+	this application will be deployed to server.
+
+
+	change the business logic -->test---> built ---> deploy
+
+	E-Cart Application
+
+
+	shopping cart module
+	stock module
+	customer module
+	payment module
+
+
+	Monolithic application
+
+	360 degree improvement
+		project modeling
+		project development
+		project deployment
+		project requirment analysis
+	Agile 
+		sprints   1 week to 4 weeks
+
+
+
+		loose coupling
+
+		stock module
+	
+		customer module
+
+		payment module
+		
+		shopping module
+
+
+
+
+		Microservices
+			2014
+
+		1. Small service with a Single Focus -- Payment Service will focus only on payment related 							functionalities
+		2. Lightweight
+
+		3. Easily scalable
+		
+		4. Flexible
+		
+		5. Independent flow 
+
+			business layer ----- database
+			each microservice can have it's own database
+			each microservice can be built on different technologies.
+
+		6. Application logic can be broken down into small components 
+
+		7. well defined boundries of responsibility
+
+		8. Microservices should have responsibility for a single part of a business domain. T/F
+
+		In Banking domain, 
+				Account Service
+				Customer Service -  Add Customer  CRUD customer 
+				Payment Service
+				Loan Service
+
+		9. One microservice can talk to other microservice. MS communicates with other MS
+		
+		10. During communication, data will be shared by microservices in definite format esp JSON
+
+		11. Small, independent and distributed in nature - small development team 
+
+
+	Deployment of microservices:-
+		1. physical server
+
+		2. Virtual machine images
+
+		3. Container (eg. Docker)
+
+
+
+	Tools :-
+		Spring Boot
+		Spring REST
+		Spring Cloud
+		Netflix Tools
+
+
+
+
+
+
+
+deMO :
+	- 1. Metric System - Meter to CM, KM to Meter 
+		http://localhost:8000/metric-conversion/from/KM/to/METER
+		
+		convert from KM to Meter - conversionMultiple = 1000
+		convert from Meter to KM - conversionMultiple = .001
+			     Meter to CM - conversionMultiple = 100
+
+			where above data will be persisted
+				1. hard code
+				2. in memory database -  h2 database
+				3. mysql
+					table  conversion
+						from , to, conversionMultiple
+						KM	Meter	1000
+						Meter	KM	.001
+						
+	
+
+
+
+
+		Spring REST
+
+	  2. Metric-Calculator
+
+		http://localhost:9000/metric-calculator/from/KM/to/METER/unit/10
+
+
+Metric-calculator-service --------------------> Metric-conversion-service
+						conversionMultiple
+
+
+	RestTemplate
+	
+	Netflix tool - Feign Rest Client
+			Declarative
+
+	Feign makes it easy to call microservices because
+it provides an abstraction layer over REST based calls through an annotation
+----------------------------------------------------------------------------------
+	1. Add feign dependency
+	2. enable feign in bootstrap application
+	3. create feign proxy
+
+----------------------------------------------------------------------------------
+
+Assignment :->
+
+http://localhost:8000/temp-conversion/from/CG/to/FAH
+			F = (C * 9/5) +32
+						formula
+					conversionMultiple = 100
+						
+
+
+http://localhost:9000/temp-calculator/from/CG/to/FAH/unit/10
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+				
+
+
+		
+
+		
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+...
+..
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
